@@ -122,7 +122,7 @@
   line-height: 70px;
   text-align: center;
   /* padding: 15px 35px; */
-  margin-top: 25px;
+  margin-top: 15px;
   color: #FFF;
   font-size: 20px;
   border-radius: 50px;
@@ -150,6 +150,21 @@
   border-radius: 50%;
   cursor: pointer;
   transition: .2s;
+  position: relative;
+}
+
+.sliderControllers ul li img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  transform: translate(calc(-100% - 20px), -50%);
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.sliderControllers ul li:hover img {
+  opacity: 1;
 }
 
 .sliderControllers ul li:hover {

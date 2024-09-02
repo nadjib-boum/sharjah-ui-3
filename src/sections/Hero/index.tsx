@@ -71,7 +71,9 @@ const Hero = () => {
               key={i}
               className={i === currentSlide ? style.activeBullet : undefined}
               onClick={() => setCurrentSlide(i)}
-            ></li>
+            >
+              { <img src={slide.image} height={100} />}
+            </li>
           ))}
         </ul>
       </div>
