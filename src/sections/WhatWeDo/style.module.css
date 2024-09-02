@@ -1,0 +1,114 @@
+.whatWeDo {
+  display: flex;
+  background-color: #f0f0f0;
+  align-items: center;
+  gap: 2rem;
+  padding: 50px 150px 100px;
+}
+
+.whatWeDo > div {
+  padding: 20px;
+}
+
+.textSection {
+  flex: 1 1;
+}
+
+.textSection h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.textSection p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.activitiesGrid {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.activityCard {
+  position: relative;
+  overflow: hidden;
+  height: 450px;
+}
+
+.activityCard video {
+  height: 100%;
+}
+
+.activityCard:nth-child(even) {
+  position: relative;
+  top: 50px;
+}
+
+.activityCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.activityCard:hover img {
+  transform: scale(1.1);
+}
+
+.activityOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem;
+  transition: opacity 0.3s ease;
+}
+
+.activityCard:hover .activityOverlay {
+  opacity: 0.9;
+}
+
+.activityOverlay > span {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: .9rem;
+  display: block;
+}
+
+.activityOverlay a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.9rem;
+
+  img {
+    width: 12px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .whatWeDo {
+    flex-direction: column;
+  }
+
+  .activitiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .activitiesGrid {
+    grid-template-columns: 1fr;
+  }
+}

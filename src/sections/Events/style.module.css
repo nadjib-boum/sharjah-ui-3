@@ -1,0 +1,121 @@
+.events {
+  padding: 60px 0;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+  padding: 30px 60px;
+}
+
+.text .title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.text .desc {
+  width: 70%;
+  line-height: 150%;
+}
+
+.eventList {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../../assets/events-bg.png);
+  position: relative;
+  z-index: 1;
+}
+
+.eventList .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  height: 634px;
+}
+
+.event {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: center;
+  text-align: center;
+}
+
+.event:nth-child(odd) {
+  flex-direction: column-reverse;
+}
+
+.event .eventText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event .eventText span {
+  display: block;
+  color: #FFF;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.event .eventText p {
+  color: #FFF;
+  line-height: 150%;
+  font-size: 0.9rem;
+  width: 70%;
+}
+
+.event .dot {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #F00;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.event:nth-child(n + 4) .dot{
+  background-color: #DDD !important;
+} 
+
+.event .image, .event .eventText {
+  height: 250px;
+}
+
+.event .image img {
+  object-fit: cover;
+  height: 150px;
+}
+
+.line {
+  height: 7px;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  margin-top: -3.5px;
+  background-color: #DDD;
+  z-index: -1;
+}
+
+.progress {
+  background-color: #F00;
+  height: 100%;
+  width: 60%;
+  position: absolute;
+}
+
+.progress img {
+  position: absolute;
+  left: calc(100% - 15px);
+  bottom: 100%;
+}

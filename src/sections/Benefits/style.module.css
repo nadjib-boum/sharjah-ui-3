@@ -1,0 +1,87 @@
+.benefits {
+  padding: 0 150px;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slidesRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: transform .3s;
+}
+
+.slide {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFF;
+}
+
+.benefits .content {
+  flex: 0 1 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  padding: 60px 30px;
+}
+
+.benefits .content span {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.benefits .content p {
+  line-height: 150%;
+  font-size: 1.1rem;
+}
+
+.benefits .image {
+  flex: 1;
+  text-align: right;
+}
+
+.benefits .image img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(../../assets/benefits.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(3px);
+}
+
+.sliderControllers {
+  position: absolute;
+  top: 50%;
+  left: 70px;
+}
+
+.sliderControllers ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.sliderControllers ul li {
+  padding: 5px;
+  border: 1px solid #FFF;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.sliderControllers ul li#active, .sliderControllers ul li:hover {
+  background-color: #FFF;
+}

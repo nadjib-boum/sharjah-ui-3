@@ -1,0 +1,47 @@
+.discover {
+  margin: 60px;
+  display: flex;
+  align-items: center;
+  height: 571px;
+  padding: 0 50px;
+}
+
+.discover > div {
+  flex: 1 1;
+}
+
+.content {
+  padding: 50px 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.content span {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.content p {
+  color: #505050;
+  font-size: 1.1rem;
+  line-height: 150%;
+}
+
+.content a {
+  display: inline-block;
+  padding: 15px 20px;
+  color: #FF5733;
+  border: 1px solid #FF5733;
+  border-radius: 30px;
+  transition: .2s;
+}
+
+.content a:hover {
+  background-color: #FF5733;
+  color: #FFF;
+}
+
+.image img {
+  object-fit: cover;
+}
