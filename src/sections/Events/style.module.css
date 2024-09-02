@@ -28,13 +28,14 @@
   background-image: url(../../assets/events-bg.png);
   position: relative;
   z-index: 1;
+  /* height: 735px; */
 }
 
 .eventList .wrapper {
   display: flex;
   align-items: center;
   gap: 50px;
-  height: 634px;
+  height: 735px;
 }
 
 .event {
@@ -60,7 +61,7 @@
 .event .eventText span {
   display: block;
   color: #FFF;
-  font-size: 50px;
+  /* font-size: 50px; */
   font-weight: bold;
   margin-bottom: 15px;
 }
@@ -68,8 +69,8 @@
 .event .eventText p {
   color: #FFF;
   line-height: 150%;
-  font-size: 18px;
-  line-height: 28px;
+  /* font-size: 18px; */
+  /* line-height: 28px; */
   width: 70%;
 }
 
