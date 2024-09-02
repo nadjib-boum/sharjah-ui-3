@@ -35,6 +35,7 @@
 
 .activitiesGrid.animateActivities .activityCard {
   transform: translateX(0);
+  opacity: 1;
 }
 
 .activityCard {
@@ -43,7 +44,8 @@
   height: 570px;
   width: 180px;
   transform: translateX(100px);
-  transition: transform .5s;
+  opacity: 0;
+  transition: .5s;
 }
 
 .activityCard video {

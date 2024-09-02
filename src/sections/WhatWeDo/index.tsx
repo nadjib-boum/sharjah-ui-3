@@ -8,7 +8,7 @@ import video from "../../assets/videos/video.mp4"
 const Activity = ({ activity, video, index }: any) => {
 
   return (
-    <div className={style.activityCard} style={{ transitionDelay: `${index * .5}s` }}>
+    <div className={style.activityCard} style={{ transitionDelay: `${(index + 1) * .3}s` }}>
       {video}
       <div className={style.activityOverlay }>
         <span>{activity.title}</span>
