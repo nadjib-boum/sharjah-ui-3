@@ -69,7 +69,7 @@ const Hero = () => {
           {SLIDES.map((slide, i) => (
             <li
               key={i}
-              className={i === currentSlide ? style.active : undefined}
+              className={i === currentSlide ? style.activeBullet : undefined}
               onClick={() => setCurrentSlide(i)}
             ></li>
           ))}

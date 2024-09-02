@@ -35,7 +35,7 @@ const Companies = () => {
 
   return (
     <div className={style.testimonials}>
-      <span className={style.sectionTitle}>Companies</span>
+      <span className={style.sectionTitle}>Companies we Work with</span>
       <div className={style.companies}>
         { companies.map ((c) => <Company url={c.image} />) }
         {/* <Company url={"https://placehold.co/200x200/FF0000/000000/png"} /> */}

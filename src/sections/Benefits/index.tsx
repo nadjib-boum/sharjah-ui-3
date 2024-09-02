@@ -35,20 +35,6 @@ const Benefits = () => {
     { image: benefits4 },
   ];
 
-  // useEffect (() => {
-
-  //   const t = setInterval (() => {
-
-  //     setCurrentHeroSlide ((prev) => prev == SLIDES.length - 1 ? 0 : prev + 1);
-
-  //   }, 3000);
-
-  //   return () => {
-  //     clearInterval (t);
-  //   }
-
-  // }, [currentHeroSlide])
-
   return (
     <div className={style.benefits}>
       <div className={style.slidesRow} style={{ transform: `translateY(-${currentSlide * 100}vh)` }}>

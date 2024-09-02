@@ -157,7 +157,7 @@
 
 }
 
-.sliderControllers ul li#active {
+.sliderControllers ul li.activeBullet {
   background-color: #FFF;
 }
 

@@ -1,5 +1,5 @@
 .benefits {
-  padding: 0 150px;
+  padding: 0 140px;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -28,13 +28,13 @@
 }
 
 .benefits .content span {
-  font-size: 3rem;
+  font-size: 50px;
   font-weight: bold;
 }
 
 .benefits .content p {
-  line-height: 150%;
-  font-size: 1.1rem;
+  line-height: 28px;
+  font-size: 20px;
 }
 
 .benefits .image {
@@ -65,17 +65,19 @@
   position: absolute;
   top: 50%;
   left: 70px;
+  transform: translateY(-50%);
 }
 
 .sliderControllers ul {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 25px;
   list-style: none;
 }
 
 .sliderControllers ul li {
-  padding: 5px;
+  height: 13px;
+  width: 13px;
   border: 1px solid #FFF;
   border-radius: 50%;
   cursor: pointer;
