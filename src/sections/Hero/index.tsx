@@ -10,6 +10,7 @@ import slide4 from "../../assets/slides/4.png";
 import slide5 from "../../assets/slides/5.png";
 
 const Hero = () => {
+
   const [currentSlide, setCurrentSlide] = useAtom(currentHeroSlideAtom);
 
   const SLIDES = [

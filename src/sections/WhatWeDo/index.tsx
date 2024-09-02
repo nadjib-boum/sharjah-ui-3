@@ -1,13 +1,14 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import gsap from "gsap";
 import style from "./style.module.css";
 import arrow from "../../assets/arrow-icon.png"
 import video from "../../assets/videos/video.mp4"
 
 
-const Activity = ({ activity, video }: any) => {
+const Activity = ({ activity, video, index }: any) => {
 
   return (
-    <div className={style.activityCard}>
+    <div className={style.activityCard} style={{ transitionDelay: `${index * .5}s` }}>
       {video}
       <div className={style.activityOverlay }>
         <span>{activity.title}</span>
@@ -18,6 +19,7 @@ const Activity = ({ activity, video }: any) => {
       </div>
     </div>
   );
+
 }
 
 const WhatWeDo = () => {
@@ -31,12 +33,6 @@ const WhatWeDo = () => {
 
   const [activeVideo, setActiveVideo] = useState(0);
   const videoRefs = useRef<any>([]);
-
-  useEffect(() => {
-    if (videoRefs.current[0]) {
-      videoRefs.current[0].play();
-    }
-  }, []);
 
   const handleMouseEnter = ((index: number) => {
 
@@ -61,6 +57,37 @@ const WhatWeDo = () => {
 
   });
 
+  const [isVisible, setIsVisible] = useState(false);
+  const triggerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(entry.isIntersecting);
+        }
+
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 
+      }
+    );  
+
+    if (triggerRef.current) {
+      observer.observe(triggerRef.current);
+    }
+
+    return () => {
+      if (triggerRef.current) {
+        observer.unobserve(triggerRef.current);
+      }
+    };
+  }, []);
+
+
   return (
     <div className={style.whatWeDo}>
       <div className={style.textSection}>
@@ -71,7 +98,7 @@ const WhatWeDo = () => {
           amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
         </p>
       </div>
-      <div className={style.activitiesGrid}>
+      <div className={`${style.activitiesGrid} ${ isVisible ? style.animateActivities : null}`} ref={triggerRef}>
         {activities.map((activity, index) => (
           <Activity 
             key={index}
