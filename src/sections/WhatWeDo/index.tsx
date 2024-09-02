@@ -60,6 +60,12 @@ const WhatWeDo = () => {
   const [isVisible, setIsVisible] = useState(false);
   const triggerRef = useRef(null);
 
+  useEffect (() => {
+
+    if (videoRefs.current[0]) videoRefs.current[0].play();
+
+  }, [])
+
   useEffect(() => {
 
     const observer = new IntersectionObserver(([entry]) => {

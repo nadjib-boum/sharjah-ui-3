@@ -28,7 +28,6 @@
   background-image: url(../../assets/events-bg.png);
   position: relative;
   z-index: 1;
-  /* height: 735px; */
 }
 
 .eventList .wrapper {

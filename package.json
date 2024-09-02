@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.42",
     "embla-carousel-react": "^8.2.0",
+    "fullpage.js": "^4.0.28",
     "gsap": "^3.12.5",
     "jotai": "^2.9.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-fullpage": "^0.1.19",
     "scrolltrigger": "^1.0.1"
   },
   "devDependencies": {
