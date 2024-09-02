@@ -63,6 +63,7 @@
 
 .embla__viewport {
   overflow: hidden;
+  margin-left: -900px;
 }
 
 .embla__container {
