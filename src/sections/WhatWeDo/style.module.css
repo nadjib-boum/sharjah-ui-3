@@ -1,8 +1,9 @@
 .whatWeDo {
   display: flex;
+  background-color: #f0f0f0;
   align-items: center;
   gap: 2rem;
-  padding: 50px 150px 100px;
+  padding: 50px 130px 100px;
 }
 
 .whatWeDo > div {
@@ -14,14 +15,15 @@
 }
 
 .textSection h2 {
-  font-size: 2.5rem;
+  font-size: 50px;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
 .textSection p {
   color: #666;
-  line-height: 1.6;
+  line-height: 28px;
+  font-size: 20px;
 }
 
 .activitiesGrid {
@@ -34,7 +36,8 @@
 .activityCard {
   position: relative;
   overflow: hidden;
-  height: 450px;
+  height: 570px;
+  width: 180px;
 }
 
 .activityCard video {
@@ -43,7 +46,7 @@
 
 .activityCard:nth-child(even) {
   position: relative;
-  top: 50px;
+  top: 55px;
 }
 
 .activityCard img {
@@ -62,7 +65,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-  /* background-color: rgba(0, 0, 0, 0.5); */
   color: white;
   padding: 1rem;
   transition: opacity 0.3s ease;
