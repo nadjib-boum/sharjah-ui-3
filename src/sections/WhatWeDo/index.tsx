@@ -61,30 +61,21 @@ const WhatWeDo = () => {
   const triggerRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        
-        if (entry.isIntersecting && !isVisible) {
-          setIsVisible(entry.isIntersecting);
-        }
 
-      },
-      {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.5 
-      }
-    );  
+    const observer = new IntersectionObserver(([entry]) => {
+        
+      if (entry.isIntersecting && !isVisible) setIsVisible(entry.isIntersecting);
+
+    }, { root: null, rootMargin: '0px', threshold: 0.5 });  
 
     if (triggerRef.current) {
       observer.observe(triggerRef.current);
     }
 
     return () => {
-      if (triggerRef.current) {
-        observer.unobserve(triggerRef.current);
-      }
+      if (triggerRef.current) observer.unobserve(triggerRef.current);
     };
+
   }, []);
 
 
