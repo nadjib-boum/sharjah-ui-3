@@ -105,7 +105,7 @@ const WhatWeDo = () => {
               <video
                 key={index}
                 ref={(el) => {
-                  if(el) el.currentTime = index * 5;
+                  if(el) el.currentTime = index * 7;
                   return (videoRefs.current[index] = el);
                 }}
                 src={activity.video} // Replace with your video sources
