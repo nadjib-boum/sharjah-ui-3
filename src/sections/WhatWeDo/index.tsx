@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import style from "./style.module.css";
 import arrow from "../../assets/arrow-icon.png"
