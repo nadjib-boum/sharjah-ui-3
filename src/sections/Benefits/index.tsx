@@ -9,7 +9,7 @@ import benefits4 from "../../assets/benefits/4.png";
 const Slide = ({ image }: any) => {
 
   return (
-    <div className={style.slide}>
+    <div className={`${style.slide}`}>
       <div className={style.content}>
         <span>EPA Benefits</span>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad miniminut veniam</p>

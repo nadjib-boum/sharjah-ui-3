@@ -1,4 +1,4 @@
-import discover from "../../assets/discover.png";
+import a from "../../assets/a.png";
 import style from "./style.module.css"
 
 const StayInTouch = () => {
@@ -14,7 +14,7 @@ const StayInTouch = () => {
         </div>
       </div>
       <div className={style.image}>
-        <img src={discover} />
+        <img src={a} />
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+// @ts-nocheck
+import ReactFullpage from "@fullpage/react-fullpage";
 import Hero from './sections/Hero';
 import Discover from './sections/Discover';
 import WhatWeDo from './sections/WhatWeDo';
@@ -15,11 +17,11 @@ function App() {
   return (
     <div className='page'>
 
-      <Hero />
+<Hero />
 
-      <Discover />
+<Discover />
 
-      <WhatWeDo />
+<WhatWeDo />
 
       <Benefits />
 

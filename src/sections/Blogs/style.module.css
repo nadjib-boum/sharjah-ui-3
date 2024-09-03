@@ -19,7 +19,7 @@
   width: 400px;
   border-radius: 25px;
   position: relative;
-  background-image: url(../../assets/slide.png);
+  /* background-image: url(../../assets/slide.png); */
 }
 
 .card a {
@@ -64,7 +64,6 @@
 }
 
 .embla__viewport {
-  overflow: hidden;
   margin-left: -900px;
 }
 

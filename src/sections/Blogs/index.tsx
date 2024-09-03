@@ -1,12 +1,14 @@
-import { useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react'
 import style from "./style.module.css";
+import blog1 from "../../assets/blogs/1.png"
+import blog2 from "../../assets/blogs/2.png"
+import blog3 from "../../assets/blogs/3.png"
 
 
 
-const Card = () => {
+const Card = ({ image }: any) => {
   return (
-    <div className='embla__slide'>
+    <div className='embla__slide' style={{ backgroundImage: `url(${image})` }}>
       <div className={`${style.card}`}>
         <a href="#">Read More</a>
         <span>Emirati Publishers Stress the Importance of AI In The Publishing</span>
@@ -18,7 +20,20 @@ const Card = () => {
 const Blogs = () => {
 
 
-  const slides = Array (6).fill (1);
+  const slides = [
+    {
+      image: blog1,
+    },
+    {
+      image: blog2,
+    },
+    {
+      image: blog3,
+    },
+    {
+      image: blog2,
+    }
+  ]
   const [emblaRef] = useEmblaCarousel({ containScroll: false })
 
   return (
@@ -28,7 +43,7 @@ const Blogs = () => {
       <div className={style.embla__viewport} ref={emblaRef}>
         <div className={style.embla__container}>
           {slides.map((item, index) => (
-            <Card key={index} />
+            <Card key={index} image={item.image} />
           ))}
         </div>
       </div>

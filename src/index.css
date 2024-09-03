@@ -9,9 +9,13 @@
 body {
   height: 6000px;
   font-family: "Noto Sans", sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 a {
   text-decoration: none;
+}
+
+.section {
+  overflow-x: hidden;
 }
