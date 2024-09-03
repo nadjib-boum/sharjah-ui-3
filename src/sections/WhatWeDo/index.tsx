@@ -104,7 +104,10 @@ const WhatWeDo = () => {
             video={
               <video
                 key={index}
-                ref={(el) => (videoRefs.current[index] = el)}
+                ref={(el) => {
+                  if(el) el.currentTime = index * 5;
+                  return (videoRefs.current[index] = el);
+                }}
                 src={activity.video} // Replace with your video sources
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={() => handleMouseLeave(index)}
